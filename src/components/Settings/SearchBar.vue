@@ -136,7 +136,10 @@ export default {
           ? searchPrefs.customSearchEngine
           : findUrlForSearchEngine(desiredSearchEngine, searchEngineUrls);
         if (searchUrl) { // Append search query to URL, and launch
-          searchUrl += encodeURIComponent(stripBangs(this.input, bangList));
+          if (!searchUrl.includes('%s')) {
+            searchUrl += '%s';
+          }
+          searchUrl = searchUrl.replace('%s', encodeURIComponent(stripBangs(this.input, bangList)));
           this.launchWebSearch(searchUrl, openingMethod);
           this.clearFilterInput();
         }

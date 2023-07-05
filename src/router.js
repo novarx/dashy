@@ -118,6 +118,7 @@ const mode = appConfig.routingMode || 'history';
 
 /* List of all routes, props, components and metadata */
 const router = new Router({
+  base: process.env.VUE_APP_DOMAIN || window.location.origin,
   mode,
   routes: [
     ...makeMultiPageRoutes(pages),

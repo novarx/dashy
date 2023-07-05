@@ -210,7 +210,7 @@ module.exports = {
     si: 'https://unpkg.com/simple-icons@v7/icons',
     generative: 'https://avatars.dicebear.com/api/identicon/{icon}.svg',
     generativeFallback: 'https://evatar.io/{icon}',
-    localPath: './item-icons',
+    localPath: 'item-icons',
     faviconName: 'favicon.ico',
     homeLabIcons: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/master/png/{icon}.png',
     homeLabIconsFallback: 'https://raw.githubusercontent.com/NX211/homer-icons/master/png/{icon}.png',
@@ -304,16 +304,16 @@ module.exports = {
   /* Progressive Web App settings, used by Vue Config */
   pwa: {
     name: 'Dashy',
-    manifestPath: './manifest.json',
+    manifestPath: 'manifest.json',
     themeColor: '#00af87',
     msTileColor: '#0b1021',
     mode: 'production',
     iconPaths: {
       manifestCrossorigin: 'use-credentials',
-      favicon64: './web-icons/favicon-64x64.png',
-      favicon32: './web-icons/favicon-32x32.png',
-      maskIcon: './web-icons/dashy-logo.png',
-      msTileImage: './web-icons/dashy-logo.png',
+      favicon64: 'web-icons/favicon-64x64.png',
+      favicon32: 'web-icons/favicon-32x32.png',
+      maskIcon: 'web-icons/dashy-logo.png',
+      msTileImage: 'web-icons/dashy-logo.png',
     },
   },
 };
